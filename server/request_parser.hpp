@@ -46,7 +46,7 @@ public:
 	  {
 		  while (begin != end)
 		  {
-			  req.body.push_back(*begin++);
+			  consume_body(req, *begin++)
 		  }
 		  return std::make_tuple(result, begin);
 	  }
@@ -57,7 +57,7 @@ public:
 private:
   /// Handle the next character of input.
   result_type consume(request& req, char input);
-  result_type consume_body(request& req, char input);
+  void consume_body(request& req, char input);
 
   /// Check if a byte is an HTTP character.
   static bool is_char(int c);

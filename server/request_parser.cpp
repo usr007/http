@@ -282,34 +282,9 @@ request_parser::result_type request_parser::consume(request& req, char input)
   }
 }
 
-request_parser::result_type request_parser::consume_body(request& req, char input)
+void request_parser::consume_body(request& req, char input)
 {
-	switch (state_)
-	{
-	case expecting_newline_1:
-		if (input == '\r')
-		{
-			state_ = expecting_newline_2;
-			return indeterminate;
-		}
-		else
-		{
-			return bad;
-		}
-	case expecting_newline_2:
-		if (input == '\n')
-		{
-			state_ = body;
-			return indeterminate;
-		}
-		else
-		{
-			return bad;
-		}
-	case body:
-		return good;
-	}
-	return good;
+	req.body.push_back(input);
 }
 
 bool request_parser::is_char(int c)
