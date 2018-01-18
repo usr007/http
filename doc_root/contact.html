@@ -1,0 +1,72 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <title>成都金数</title>
+    <meta name="HandheldFriendly" content="True" />
+    <meta name="MobileOptimized" content="320" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Lato:300|Open+Sans:700" />
+	<link rel="stylesheet" href="css/lejournal.css" />
+
+	<!--[if lt IE 9]>
+		<script src="js/html5shiv.js"></script>
+		<script src="js/respond.min.js"></script>
+	<![endif]-->
+</head>
+<body>
+<div class="page">
+	<!-- ==== START MASTHEAD ==== -->
+	<header class="masthead" role="banner">
+		<p class="logo"><a href="/"><img src="img/logo.png" alt="Le Journal" /></a></p>
+
+		<ul class="social-sites">
+			<li><a href="http://www.facebook.com">f</a></li>
+			<li><a href="http://www.twitter.com">t</a></li>
+			<li><a href="http://www.flickr.com">n</a></li>
+		</ul>
+
+		<nav role="navigation">
+			<ul class="nav-main">
+				<li><a href="/" class="current-page">首页</a></li>
+				<li><a href="/tech.html">技术与服务</a></li>
+				<li><a href="/news.html">新闻中心</a></li>
+				<li><a href="about.html">关于我们</a></li>
+				<li><a href="contact.html">联系我们</a></li>
+			</ul>
+		</nav>
+	</header>
+	<!-- end masthead -->
+
+	<!-- ==== START PAGE FOOTER ==== -->
+	<footer role="contentinfo" class="footer">
+		<p class="legal"><small>&copy; 2013 Le Journal. All Rights Reserved.</small></p>
+	</footer>
+	<!-- end page footer -->
+</div> <!-- end page -->
+</body>
+
+</form>
+<form action="/contact.html" method="post" id="user_form">
+    <label>email:<input type="email" required id="email" name="email"></label>
+    <label>IDCard:<input required id="IDCard" name="phone"></label>
+    <input type="submit" id="submit">
+</form>
+<script>
+    var email = document.getElementById('email');
+    var IDCard = document.getElementById('IDCard');
+    var form = document.getElementById('form');
+
+    IDCard.addEventListener('input', function () {
+        if(this.value.length != 11) {
+            this.setCustomValidity('IDCard的长度必须为11')
+        }else{
+            this.setCustomValidity('')
+        }
+    });
+
+    form.addEventListener('invalid', function () {
+        this.className = 'invalid';
+    }, true)
+</script>
+</html>
