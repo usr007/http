@@ -46,7 +46,7 @@ public:
 	  {
 		  while (begin != end)
 		  {
-			  consume_body(req, *begin++)
+			  consume_body(req, *begin++);
 		  }
 		  return std::make_tuple(result, begin);
 	  }
