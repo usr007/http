@@ -25,7 +25,8 @@ struct mapping
   { "html", "text/html" },
   { "jpg", "image/jpeg" },
   { "png", "image/png" },
-  { "css", "text/css" }
+  { "css", "text/css" },
+  { "json", "application/json" }
 };
 
 std::string extension_to_type(const std::string& extension)
