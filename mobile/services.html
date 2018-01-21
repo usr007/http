@@ -1,0 +1,118 @@
+    <!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="shortcut icon" href="http://www.infinite.net.cn/favicon.ico" type="image/x-icon"/>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,minimum-scale=1,maximum-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+    <meta name="format-detection" content="telephone=no">
+    <title>技术与服务-万丈金数信息技术股份有限公司</title>
+    <meta name="keywords" content="金融大数据,保险大数据,大数据应用服务,大数据资产管理,人工智能,DMP" />
+    <meta name="description" content="万丈金数是一家专注为保险、券商、银行等金融机构提供大数据服务的高科技公司，致力于打造一个“大数据技术+商业服务”的产品体系，为众多世界500强金融机构提供大数据服务" />
+    <link rel="stylesheet" type="text/css" href="/Public/css/wap_global.css" />
+</head>
+<body>
+    
+            <div class="header">
+            <div class="header-main">
+                <div class="logo">
+                    <img src="/Public/images/index/wap-logo.png" alt="">
+                </div>
+                <div class="nav-btn">
+                    <a href="javascript:;"><i class="icon iconfont panel-open" data-direction="right">&#xe6a4;</i></a>
+                </div>
+            </div>
+        </div>
+    <div class="collapse">
+        <ul class="clearfix">
+            <li><a href="/"><div class="icon"><i class="iconfont">&#xe60c;</i></div><p>首页</p></a></li>
+            <li><a href="/services.html"><div class="icon"><i class="iconfont">&#xe608;</i></div><p>技术与服务</p></a></li>
+            <li><a href="/institute.html"><div class="icon"><i class="iconfont">&#xe60a;</i></div><p>大数据研究院</p></a></li>
+            <li><a href="/news.html"><div class="icon"><i class="iconfont">&#xe609;</i></div><p>新闻中心</p></a></li>
+            <li><a href="/about.html"><div class="icon"><i class="iconfont">&#xe607;</i></div><p>关于我们</p></a></li>
+            <li><a href="/contact.html"><div class="icon"><i class="iconfont">&#xe60b;</i></div><p>联系我们</p></a></li>
+        </ul>
+    </div>
+
+
+    <div class="banner">
+        <img src="./Public/images/banner/wap-services.png">
+        <div class="caption caption-other">
+            <br>
+            <h1 class="animated fadeInLeftBig">INFINITE BUSINESS BRAIN</h1>
+            <p class="animated fadeInRightBig">6年实践，6年锤炼，推动金融大数据应用服务“智”变</p>
+        </div>
+    </div>
+
+    <div class="services_part1">
+        <div class="title-1">数据战略</div>
+        <div class="title-2">与金融机构一起，构建一个以用户数据为中心<br>高度结合业务应用需求的智能商业大脑<br>为金融机构提供面向未来的大数据服务解决方案</div>
+    </div>
+
+    <div class="services_part2">
+        <div class="title-1">技术体系</div>
+        <div class="title-2">以企业级用户大数据为核心理念</div>
+        <img src="./Public/images/services/wap-img2.png" alt="" style="margin-top: 10px;">
+    </div>
+
+    <div class="services_part3 container" style="padding: 50px 20px;">
+        <div class="title-1">服务体系</div>
+        <div class="title-2">构建数据应用场景  数据驱动金融业务</div>
+        <img src="./Public/images/services/wap-img3.png" alt="" style="margin-top: 10px; max-width: 100%;">
+        <!-- <div class="module1">
+            <img src="./Public/images/services/icon1.png" alt="">
+            <h2><br>技术服务</h2>
+            <p>数据战略咨询 Data Strategic Consulting</p>
+            <p>应用解决方案 Apppcation Solutions</p>
+            <p>技术体系部署 Deploy Technology System</p>
+            <p>技术支持 Technical Support</p>
+        </div>
+        <div class="module2">
+            <img src="./Public/images/services/icon2.png" alt="">
+            <h2><br>运营服务</h2>
+            <p>用户洞察 Customer Insights</p>
+            <p>用户运营 Customer Operation</p>
+            <p>场景化应用 Applications With Scene Support</p>
+        </div> -->
+    </div>
+
+    <div class="footer">
+  	<p>© 2011-2017万丈金数版权所有</p>
+</div>
+<script type="text/javascript" src="/Public/js/jquery-1.10.2.min.js"></script>
+<script type="text/javascript" src="/Public/js/iui.js"></script>
+<script>
+var _hmt = _hmt || [];
+(function() {
+  	var hm = document.createElement("script");
+  	hm.src = "//hm.baidu.com/hm.js?653b45c5fb160040cc6262a767e8a63c";
+  	var s = document.getElementsByTagName("script")[0];
+  	s.parentNode.insertBefore(hm, s);
+})();
+</script>
+<script type="text/javascript">
+    $('body').on('click', function(event) {
+        $('.collapse').slideUp();
+    });
+    $('.header,.collapse').on('click', function(event) {
+        event.stopPropagation();
+        $('.header').addClass('active');
+    });
+    $('.nav-btn').on('click', function(event) {
+        event.stopPropagation();
+        $('.collapse').slideDown();
+        $('.header').addClass('active');
+    });
+    headerActive();
+    function headerActive() {
+        if ($(document).scrollTop() > 100) {
+            $(".header").addClass("active");
+        	$('.collapse').slideUp();
+        } else {
+            $(".header").removeClass("active");
+        }
+    }
+    $(window).scroll(function() {
+        headerActive();
+    });
+</script>
