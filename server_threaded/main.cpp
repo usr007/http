@@ -13,7 +13,7 @@
 #include <asio.hpp>
 #include "server.hpp"
 
-// 127.0.0.1 80 4 ../doc_root
+// 127.0.0.1 80 4
 int main(int argc, char* argv[])
 {
 	try
@@ -21,7 +21,7 @@ int main(int argc, char* argv[])
 		// Check command line arguments.
 		if (argc != 5)
 		{
-			std::cerr << "Usage: http_server <address> <port> <threads> <doc_root>\n";
+			std::cerr << "Usage: http_server <address> <port> <threads>\n";
 			std::cerr << "  For IPv4, try:\n";
 			std::cerr << "    receiver 0.0.0.0 80 1 .\n";
 			std::cerr << "  For IPv6, try:\n";
@@ -31,7 +31,7 @@ int main(int argc, char* argv[])
 
 		// Initialise the server.
 		std::size_t num_threads = std::atoi(argv[3]);
-		http::server::server s(argv[1], argv[2], argv[4], num_threads);
+		http::server::server s(argv[1], argv[2], "./doc_root", num_threads);
 
 		// Run the server until stopped.
 		s.run();
