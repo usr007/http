@@ -11,4 +11,4 @@ set_property(GLOBAL PROPERTY USE_FOLDERS ON)
 set (CMAKE_CXX_STANDARD 11)
 add_subdirectory(server)
 add_subdirectory(server_threaded)
-
+install (DIRECTORY doc_root DESTINATION . COMPONENT html)
